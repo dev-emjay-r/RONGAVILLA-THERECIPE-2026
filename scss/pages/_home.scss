@@ -1,0 +1,59 @@
+@use '../abstract/' as *;
+@use '../base/typography' as *;
+
+.home-banner {
+
+
+    padding: 4rem 0;
+    background-color: $clr--secondary;
+
+    &__wrapper {
+        @include gridCustom(1fr 1fr, 2rem);
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__left {
+        h2 {
+            margin: 2rem 0;
+            max-width: 85%;
+        }
+        p {
+            margin-bottom: 2rem;
+            padding-right: 2rem;
+            text-align: justify;
+        }
+    }
+}
+
+
+.recipe-featured { 
+    padding: 4rem 0;
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title { 
+        h4 {
+            color: $clr--primary;
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            &:before, &:after {
+                content: "";
+                flex:1;
+                border-bottom: 2px solid $clr--primary;
+                margin: auto;
+                background-color: $clr--primary;
+                width: 35vw;
+                //margin: 0 1rem;
+            }
+        }
+        
+       
+    }
+}
