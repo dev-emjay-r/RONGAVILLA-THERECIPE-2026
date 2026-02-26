@@ -128,6 +128,31 @@
            }
         }
     }
+    // index
+    &-index {
+        padding: 4rem 0;
+        &__title {
+            h4 {
+                color: $clr--primary;
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                margin-bottom: 2rem;
+                &::after {
+                content: "";
+                flex:1;
+                border-bottom: 1px solid $clr--primary;
+                margin: auto;
+                background-color: $clr--primary;
+                width: 35vw;
+                }
+            }
+           
+        }
+         &__wrapper {
+                @include gridCustom(1fr 1fr 1fr, 2rem);
+        }
+    }
 }
 
 .cta {

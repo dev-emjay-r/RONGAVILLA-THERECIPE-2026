@@ -1,0 +1,26 @@
+@use '../abstract/' as *;
+
+
+.recipe-catalogue {
+ display: flex;
+            gap: 1rem;
+            &--left {
+                img {
+                    @include imgFit(10rem,15rem);
+
+                }
+            }
+            &--right {
+                align-content: center;
+                ul {
+                    display: flex;
+                    li i {
+                        font-size: 1.5rem;
+                        color: $clr--primary;
+                    }
+                }
+                a {
+                    color: $clr--light;
+                }
+            }
+}

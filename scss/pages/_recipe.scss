@@ -1,0 +1,127 @@
+@use '../abstract/' as *;
+
+
+.recipe {
+
+    &-banner {
+        padding: 4rem 0;
+        background-color: $clr--secondary;
+        height: 120vh;
+        &__title {
+            @include between;
+            h2 {
+                max-width: 40%;
+            }
+        }
+        &__metadata {
+            margin-top: 2rem;
+            padding: 2rem 0;
+            @include between;
+            border-top: 1px solid ;
+            border-bottom: 1px solid ;
+        }
+        &__content {
+            padding: 4rem 0;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            &--right {
+                background-color: $clr--primary;
+                padding: 4rem;
+                color: #fff;
+                b {
+                    margin-bottom: 2rem;
+                }
+                p {
+                    margin-bottom: 2rem;
+                    font-size: 2rem;
+                }
+                ul{
+                    @include gridFixed(1,1rem);
+                }
+                ul li {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    
+}
+
+.directions {
+    padding: 25rem 0 0;
+    &__title{
+        h3 {
+                color: $clr--primary;
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                margin-bottom: 4rem;
+                &::after {
+                content: "";
+                flex:1;
+                border-bottom: 1px solid $clr--primary;
+                margin: auto;
+                background-color: $clr--primary;
+                width: 35vw;
+                }
+            }
+    }
+    &__wrapper{
+        @include gridCustom(2fr 1fr,2rem);
+    }
+    &__right {
+        h3 {
+            color: $clr--primary;
+            margin-bottom: 2rem;
+        }
+    }
+    &__left {
+        &--nav {
+            @include between;
+
+            border-top: 1px solid $clr--light;
+            padding: 2rem 0;
+            a small {
+               
+                color: $clr--light;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+        }
+        &--video {
+            padding: 4rem 0;
+            h3 {
+                color: $clr--primary;
+                margin: 2rem 0 ;
+            }
+        }
+    }
+
+}
+.direction {
+    p  {
+        margin-bottom: 3rem;
+        text-align: justify;
+    }
+}
+.tag-list {
+    ul {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+    margin-bottom: 2rem;
+}
+
+.tags{
+    small {
+        padding: 0.5rem 1rem;
+    background-color: #B2B2B2;
+    border-radius:30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 1rem 0.2rem;
+    }
+}
