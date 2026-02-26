@@ -1633,11 +1633,12 @@ img {
 }
 
 .cta {
-  background-image: linear-gradient(rgba(204, 204, 255, 0.2)), url(../../assets/images/bell_pepper.jpeg);
+  background-image: linear-gradient(rgba(204, 204, 255, 0.3)), url(../../assets/images/bell_pepper.jpeg);
   background-repeat: no-repeat;
   background-size: 100vw;
   background-position: center;
   height: 40rem;
+  padding: 4rem;
 }
 .cta__wrapper {
   display: flex;
@@ -1658,10 +1659,22 @@ img {
 .cta__subscribe {
   display: flex;
   flex-direction: row;
+  width: 25vh;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  height: 2rem;
 }
-.cta__subscribe input {
-  height: 3rem;
-  border: 1px solid #696F77;
-  width: 100%;
-  border-radius: 15px;
+.cta__subscribe--text {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.cta__subscribe--button {
+  background-color: #D9964A;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3;
+  padding: 4px;
 }/*# sourceMappingURL=main.css.map */
