@@ -43,3 +43,11 @@ p,a {
   font-size: 1.25rem;
   font-family: $font-primary;
 }
+// space between letters
+
+.space-between {
+  color: $clr--primary;
+  letter-spacing: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}

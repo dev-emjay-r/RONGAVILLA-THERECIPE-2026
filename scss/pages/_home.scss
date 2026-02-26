@@ -26,8 +26,9 @@
     }
 }
 
-
-.recipe-featured { 
+.recipe {
+    // Featured
+    &-featured { 
     padding: 4rem 0;
     
     &__wrapper {
@@ -55,5 +56,112 @@
         }
         
        
+    }
+
+    &__grid {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+}
+    // Card
+    &-card {
+        img {
+            @include imgFit(20rem,30rem);
+        }
+        max-width: 20rem;
+        &__content {
+            text-align: center;
+           display: flex;
+           flex-direction: column;
+           gap: 1rem;
+        }
+        &__snippet {
+            p {
+                text-align: justify;
+            }
+        }
+    }
+    // Collection
+    &-collection {
+        padding: 4rem 0;
+        &__wrapper {
+            @include gridFixed(1,2rem);
+
+        }
+        &__title {
+            h4 {
+                color: $clr--primary;
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                margin-bottom: 2rem;
+                &::after {
+                content: "";
+                flex:1;
+                border-bottom: 1px solid $clr--primary;
+                margin: auto;
+                background-color: $clr--primary;
+                width: 35vw;
+                }
+            }
+        }
+        &__item {
+           @include gridFixed(2, 4rem);
+           &--right {
+            h3 {
+                margin: 2rem 0;
+            }
+            p {
+                margin-bottom: 3rem;
+            }
+           }
+           &:nth-child(2n+1) {
+            .recipe-collection__item--left {
+                order: 2;
+            }
+            .recipe-collection__item--right {
+                order: 1;
+            }
+           }
+        }
+    }
+}
+
+.cta {
+    
+
+    background-image: linear-gradient(rgba(204, 204, 255, .2)), url(../../assets/images/bell_pepper.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center;
+    height: 40rem;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color : #fff;
+    }
+    &__title { 
+        padding: 4rem 0;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__subscribe {
+        display: flex;
+        flex-direction: row;
+        input {
+            height: 3rem;
+            border: 1px solid $clr--dark;
+            width: 100%;
+            border-radius: 15px;
+        }
     }
 }
