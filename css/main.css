@@ -1550,7 +1550,14 @@ img {
   color: #696F77;
 }
 
+@media screen and (max-width: 520px) {
+  .header {
+    position: fixed;
+    width: 100%;
+  }
+}
 .header {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 3rem 0;
 }
 .header__wrapper {
@@ -1567,12 +1574,55 @@ img {
   gap: 3rem;
 }
 .header__nav ul li a {
+  font-weight: 600;
   color: #696F77;
+}
+@media screen and (max-width: 520px) {
+  .header__nav.open ul {
+    right: 0;
+    transition: all 0.5s ease;
+  }
+  .header__nav.open ul li a {
+    color: #666673;
+  }
+  .header__nav ul {
+    position: fixed;
+    background-color: #F9E9D7;
+    height: 100vh;
+    width: 100%;
+    right: -100%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+}
+.header .toggle_menu {
+  display: none;
+}
+.header .toggle_menu span {
+  color: #696F77;
+  width: 3rem;
+  border: 2px solid #696F77;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .header .toggle_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .home-banner {
   padding: 4rem 0;
   background-color: #F9E9D7;
+}
+@media screen and (max-width: 520px) {
+  .home-banner {
+    padding-top: 10rem;
+  }
 }
 .home-banner__wrapper {
   display: grid;
@@ -1580,6 +1630,12 @@ img {
   gap: 2rem;
   align-items: center;
   gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .home-banner__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .home-banner__left h2 {
   margin: 2rem 0;
@@ -1619,6 +1675,12 @@ img {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .recipe-featured__grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .recipe-card img {
   width: 20rem;
@@ -1677,8 +1739,24 @@ img {
 .recipe-collection__item:nth-child(2n+1) .recipe-collection__item--left {
   order: 2;
 }
+@media screen and (max-width: 520px) {
+  .recipe-collection__item:nth-child(2n+1) .recipe-collection__item--left {
+    order: 1;
+  }
+}
 .recipe-collection__item:nth-child(2n+1) .recipe-collection__item--right {
   order: 1;
+}
+@media screen and (max-width: 520px) {
+  .recipe-collection__item:nth-child(2n+1) .recipe-collection__item--right {
+    order: 2;
+  }
+}
+@media screen and (max-width: 520px) {
+  .recipe-collection__item {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .recipe-index {
   padding: 4rem 0;
@@ -1703,14 +1781,20 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .recipe-index__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .cta {
-  background-image: linear-gradient(rgba(204, 204, 255, 0.3)), url(../../assets/images/bell_pepper.jpeg);
+  background-image: linear-gradient(rgba(204, 204, 255, 0.5)), url(../../assets/images/bell_pepper.jpeg);
   background-repeat: no-repeat;
   background-size: 100vw;
   background-position: center;
   height: 40rem;
-  padding: 4rem;
+  padding: 0;
 }
 .cta__wrapper {
   display: flex;
@@ -1728,14 +1812,19 @@ img {
   justify-content: center;
   align-items: center;
 }
+.cta__content p {
+  margin-bottom: 2rem;
+}
 .cta__subscribe {
   display: flex;
-  flex-direction: row;
-  width: 25vh;
-  overflow: hidden;
+  width: 25vw;
+  padding: 4px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
-  height: 2rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 .cta__subscribe--text {
   flex-grow: 1;
@@ -1748,13 +1837,19 @@ img {
   border: none;
   cursor: pointer;
   transition: background 0.3;
-  padding: 4px;
+  padding: 1rem;
+  color: #fff;
 }
 
 .about-banner {
   padding: 4rem 0;
   background-color: #F9E9D7;
   height: 80vh;
+}
+@media screen and (max-width: 520px) {
+  .about-banner {
+    padding-top: 10rem;
+  }
 }
 .about-banner__wrapper {
   display: flex;
@@ -1774,6 +1869,12 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .about-content__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .about-content__left h1 {
   margin-bottom: 2rem;
@@ -1799,6 +1900,11 @@ img {
   background-color: #F9E9D7;
   height: 80vh;
 }
+@media screen and (max-width: 520px) {
+  .contact-banner {
+    padding-top: 10rem;
+  }
+}
 .contact-banner__wrapper {
   display: flex;
   flex-direction: column;
@@ -1820,6 +1926,12 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .contact-forms__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .contact-forms__right {
   padding: 2rem;
@@ -1882,6 +1994,11 @@ img {
   background-color: #F9E9D7;
   height: 120vh;
 }
+@media screen and (max-width: 520px) {
+  .recipe-banner {
+    padding-top: 10rem;
+  }
+}
 .recipe-banner__title {
   display: flex;
   justify-content: space-between;
@@ -1889,6 +2006,17 @@ img {
 }
 .recipe-banner__title h2 {
   max-width: 40%;
+}
+@media screen and (max-width: 520px) {
+  .recipe-banner__title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+  }
+  .recipe-banner__title h2 {
+    max-width: 100%;
+  }
 }
 .recipe-banner__metadata {
   margin-top: 2rem;
@@ -1899,12 +2027,22 @@ img {
   border-top: 1px solid;
   border-bottom: 1px solid;
 }
+@media screen and (max-width: 520px) {
+  .recipe-banner__metadata {
+    display: flex;
+  }
+}
 .recipe-banner__content {
   padding: 4rem 0;
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
   gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .recipe-banner__content {
+    flex-direction: column;
+  }
 }
 .recipe-banner__content--right {
   background-color: #D9964A;
@@ -1930,6 +2068,11 @@ img {
 .directions {
   padding: 25rem 0 0;
 }
+@media screen and (max-width: 520px) {
+  .directions {
+    padding-top: 80rem;
+  }
+}
 .directions__title h3 {
   color: #D9964A;
   display: flex;
@@ -1950,6 +2093,12 @@ img {
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .directions__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .directions__right h3 {
   color: #D9964A;
   margin-bottom: 2rem;
@@ -1967,11 +2116,24 @@ img {
   font-size: 1.3rem;
 }
 .directions__left--video {
-  padding: 4rem 0;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 .directions__left--video h3 {
   color: #D9964A;
   margin: 2rem 0;
+}
+.directions__left--video .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .direction p {

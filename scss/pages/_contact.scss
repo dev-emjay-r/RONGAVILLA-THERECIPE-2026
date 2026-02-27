@@ -6,6 +6,9 @@
     padding: 4rem 0;
     background-color: $clr--secondary;
     height: 80vh;
+    @include mediaQuery(520px) {
+      padding-top: 10rem;
+    }
     &__wrapper {
       display: flex;
       flex-direction: column;
@@ -26,6 +29,10 @@
     padding: 16rem 0;
     &__wrapper {
       @include gridCustom(2fr 1fr, 5rem);
+      @include mediaQuery(520px) {
+        display: flex;
+        flex-direction: column;
+      }
     }
     &__right {
         padding: 2rem;

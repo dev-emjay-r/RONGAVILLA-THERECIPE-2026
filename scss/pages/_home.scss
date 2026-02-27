@@ -6,11 +6,17 @@
 
     padding: 4rem 0;
     background-color: $clr--secondary;
-
+    @include mediaQuery(520px) {
+        padding-top: 10rem;
+    }
     &__wrapper {
         @include gridCustom(1fr 1fr, 2rem);
         align-items: center;
         gap: 2rem;
+        @include mediaQuery(520px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     &__left {
@@ -36,6 +42,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
     }
 
     &__title { 
@@ -63,6 +70,10 @@
         display: flex;
         flex-direction: row;
         gap: 2rem;
+         @include mediaQuery(520px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
 }
@@ -121,12 +132,23 @@
            &:nth-child(2n+1) {
             .recipe-collection__item--left {
                 order: 2;
+                @include mediaQuery(520px) {
+                    order :1
+                }
             }
             .recipe-collection__item--right {
                 order: 1;
+                @include mediaQuery(520px) {
+                    order :2
+                }
             }
            }
-        }
+            @include mediaQuery(520px) {
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }   
     }
     // index
     &-index {
@@ -151,6 +173,10 @@
         }
          &__wrapper {
                 @include gridCustom(1fr 1fr 1fr, 2rem);
+                @include mediaQuery(520px) {
+                    display: flex;
+                    flex-direction: column;
+                }
         }
     }
 }
@@ -158,12 +184,13 @@
 .cta {
     
 
-    background-image: linear-gradient(rgba(204, 204, 255, .3)), url(../../assets/images/bell_pepper.jpeg);
+    background-image: linear-gradient(rgba(204, 204, 255, .5)), url(../../assets/images/bell_pepper.jpeg);
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position: center;
     height: 40rem;
-    padding: 4rem;
+    padding: 0;
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -173,33 +200,41 @@
     }
     &__title { 
         padding: 4rem 0;
+       
     }
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        p {
+             margin-bottom: 2rem;
+        }
     }
     &__subscribe {
         display: flex;
-        flex-direction: row;
-        width: 25vh;
-        overflow: hidden;
+        width: 25vw;
+        padding: 4px;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 8px;
-        height: 2rem;
+        height: 3rem;
+        justify-content: center;
+  align-items: center;
+  margin: auto;
         &--text {
             flex-grow: 1;
             border: none;
             background: transparent;
             outline: none;
+            
         }
         &--button {
             background-color: $clr--primary;
             border: none;
             cursor: pointer;
             transition: background 0.3;
-            padding: 4px;
+            padding: 1rem;
+            color: #fff;
         }
     }
 }
